@@ -12,8 +12,11 @@
     "@deck.gl/google-maps": "^8.8.9",
     "deck.gl": "^8.8.9",
     "google-map-react": "^2.2.0",
+    "mapbox-gl": "1.13.2",
+    "maplibre-gl": "^2.4.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-map-gl": "^7.0.19"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",

@@ -2,7 +2,8 @@ import React from "react";
 import GoogleMapReact from "google-map-react";
 import { GoogleMapsOverlay } from "@deck.gl/google-maps";
 import { GeoJsonLayer, ArcLayer } from "deck.gl";
-import AIR_PORTS from "../public/sample.json";
+
+const AIR_PORTS = "../public/sample.geojson"
 
 const AnyReactComponent = ({ text = "" }) => <div>{text}</div>;
 // const AIR_PORTS = "../public/sample.geojson";
@@ -18,7 +19,7 @@ const deckOverlay = new GoogleMapsOverlay({
       pointRadiusMinPixels: 2,
       opacity: 1,
       pointRadiusScale: 2000,
-      getRadius: (f) => 11 - f.properties.scalerank,
+      getRadius: (f) => (11 - f.properties.scalerank) * 10,
       getFillColor: [10, 0, 80, 180],
 
       pickable: true,
@@ -28,12 +29,13 @@ const deckOverlay = new GoogleMapsOverlay({
       id: "arcs",
       data: AIR_PORTS,
       dataTransform: (d) =>
-        d.features.filter((f) => f.properties.scalerank < 4),
+        d.features.filter((f) => f.properties.scalerank < 40),
       getSourcePosition: (f) => [-0.4531566, 51.4709959], // London
       getTargetPosition: (f) => f.geometry.coordinates,
       getSourceColor: [200, 128, 200],
       getTargetColor: [100, 0, 80],
-      getWidth: 0.5,
+      getWidth: 2.5,
+      greatCircle: true,
     }),
   ],
 });
@@ -48,7 +50,7 @@ export const GoogleMapDeck = () => {
 
   return (
     // Important! Always set the container height explicitly
-    <div style={{ height: "50vh", width: "100%" }}>
+    <div style={{ height: "100vh", width: "100%" }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: "" }}
         defaultCenter={defaultProps.center}
