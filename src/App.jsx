@@ -11,14 +11,17 @@ function App() {
 
   return (
     <div className="App">
-      {/* <link href='https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css' rel='stylesheet' />
-      <div style={{ width: "100vw", height: "100vh" }}>
-        <GoogleMapDeck />
-      </div> */}
-      {/* <NextMapTemp /> */}
-      {/* <ReactMapGl /> */}
-
-      <Mappp />
+      <div
+        style={{
+          position: "relative",
+          width: "100vw",
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Mappp />
+      </div>
     </div>
   );
 }
