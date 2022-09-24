@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@deck.gl/google-maps": "^8.8.9",
+    "@loaders.gl/json": "^3.2.9",
     "deck.gl": "^8.8.9",
     "google-map-react": "^2.2.0",
     "mapbox-gl": "1.13.2",

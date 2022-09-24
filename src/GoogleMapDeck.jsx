@@ -3,7 +3,7 @@ import GoogleMapReact from "google-map-react";
 import { GoogleMapsOverlay } from "@deck.gl/google-maps";
 import { GeoJsonLayer, ArcLayer } from "deck.gl";
 
-const AIR_PORTS = "../public/sample.geojson"
+const AIR_PORTS = "../public/sample.geojson";
 
 const AnyReactComponent = ({ text = "" }) => <div>{text}</div>;
 // const AIR_PORTS = "../public/sample.geojson";
