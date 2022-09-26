@@ -41,14 +41,15 @@ function App() {
       <div
         style={{
           position: "relative",
-          width: "100vw",
-          height: "100vh",
+          width: "800px",
+          height: "500px",
           display: "flex",
           justifyContent: "center",
         }}
       >
-        <GoogleMapWithLayers setPositionData={setPositionData} />
-        <Box>
+        {/* <GoogleMapWithLayers setPositionData={setPositionData} /> */}
+        <IconLayeredMap />
+        {/* <Box>
           {positionData && (
             <>
               <p>properties:type:{positionData?.properties?.type}</p>
@@ -62,7 +63,7 @@ function App() {
               <p>{JSON.stringify(positionData?.geometry)}</p>
             </>
           )}
-        </Box>
+        </Box> */}
       </div>
     </div>
   );
